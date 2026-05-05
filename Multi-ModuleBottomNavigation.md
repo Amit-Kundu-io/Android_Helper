@@ -229,6 +229,19 @@ fun NavGraphBuilder.leaveNavigation(
 
 ---
 
+```
+ onValueChange = { item ->
+                navController.navigate(item.route ?""){
+                    popUpTo(HomeRoutesHomeRoute::class.qualifiedName ?: "") {
+                        saveState = true
+                    }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            }
+```
+
+
 |   |
 | - |
 
